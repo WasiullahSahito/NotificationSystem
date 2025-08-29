@@ -20,19 +20,7 @@ Notifier is a robust, full-stack application designed to send, schedule, and tra
 *   **Secure Endpoints**: All core API routes are protected and require user authentication.
 *   **Responsive Frontend**: A complete user interface built with React to manage templates and send notifications.
 
-## 🚀 Live Demo
 
-[A live version of the application can be accessed here - *link to your deployed app*]
-
-## 📸 Screenshots
-
-| Login Page                                  | Dashboard                                    |
-| ------------------------------------------- | -------------------------------------------- |
-|  |  |
-
-| Notifications Page                          | Templates Page                               |
-| ------------------------------------------- | -------------------------------------------- |
-|  |  |
 
 ## 🛠️ Tech Stack
 
@@ -46,18 +34,7 @@ Notifier is a robust, full-stack application designed to send, schedule, and tra
 | **Email**     | [Nodemailer](https://nodemailer.com/) (with Ethereal for development)                                           |
 | **SMS**       | [Infobip SDK](https://www.infobip.com/docs/api) (with a mock service fallback)                                  |
 
-## 🏗️ Architecture
 
-```mermaid
-graph TD
-    A[React Client] <--> B{REST API (Node.js/Express)};
-    B <--> C[MongoDB (Database)];
-    B -- Enqueues Job --> D[Redis (Bull Queue)];
-    E[Worker Process] -- Processes Job --> D;
-    E -- Sends Email --> F[Nodemailer / Ethereal];
-    E -- Sends SMS --> G[Infobip API];
-    E -- Updates Status --> C;
-```
 
 ## 🚀 Getting Started
 
